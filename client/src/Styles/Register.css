@@ -1,0 +1,47 @@
+.registerForm {
+    height: 82vh;
+}
+
+.registerForm .placeholderContainer:nth-child(1) input {
+    border-radius: 5px 5px 0 0;
+}
+
+.registerForm .placeholderContainer:not(:nth-child(1), :nth-child(4)) input {
+    border-radius: 0;
+}
+
+.registerForm .placeholderContainer:nth-child(4) input {
+    border-radius: 0 0 5px 5px;
+}
+
+.registerAvatarContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.registerAvatarContainer i {
+    height: 60px;
+    width: 60px;
+    font-size: 3.6rem;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.userAvatar{
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.registerAvatarContainer img {
+    width: 60px;
+}
+
+.registerAvatarContainer label {
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+}

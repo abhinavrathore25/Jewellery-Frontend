@@ -1,0 +1,44 @@
+.loginForm,.registerForm {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    width: 300px;
+    height: 350px;
+}
+
+.loginForm .placeholderContainer input ,.registerForm .placeholderContainer input{
+    height: 50px;
+    padding-top: 22px;
+}
+
+.loginForm label:hover ,.registerForm label:hover{
+    cursor: text;
+    user-select: none;
+}
+
+.placeholderDynamic {
+    position: absolute;
+    top: 14px;
+    left: 13px;
+    opacity: 0.7;
+    transition: top 200ms, font-size 200ms;
+}
+
+.placeholderStatic {
+    position: absolute;
+    top: 3px;
+    left: 13px;
+    font-size: 10px;
+}
+
+.placeholderContainer{
+    position: relative;
+}
+
+.placeholderContainer>input:focus + .placeholderDynamic {
+    top: 3px;
+    font-size: 10px;
+    transition: top 200ms, font-size 200ms;
+}
