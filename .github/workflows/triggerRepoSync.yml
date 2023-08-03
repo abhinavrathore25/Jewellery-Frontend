@@ -13,6 +13,6 @@ jobs:
       - name: Trigger repository dispatch
         uses: peter-evans/repository-dispatch@v2
         with:
-          token: ${{ secrets.PRIVATE_REPO_TOKEN }}
+          token: ${{ secrets.REPO_DISPATCH_TOKEN }}
           repository: abhinavrathore25/Jewellery-Ecommerce
           event-type: sync-client
