@@ -1,9 +1,7 @@
 name: Sync Client to Private Repository
 
 on:
-  push:
-    paths:
-      - 'client/**'
+  workflow_dispatch:
 
 jobs:
   sync_to_private:
