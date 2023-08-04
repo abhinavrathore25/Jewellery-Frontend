@@ -12,6 +12,7 @@ import Product from "./components/Product";
 import Admin from "./components/Admin";
 
 function App() {
+  // Checking triggers
   return (
     <>
     <BrowserRouter>
