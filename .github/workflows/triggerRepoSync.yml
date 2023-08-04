@@ -1,18 +1,21 @@
-name: Trigger Sync in Private Repository
+name: Sync Client to Private Repository
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - 'client/**'
 
 jobs:
-  trigger_sync:
+  sync_to_private:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: Trigger repository dispatch
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Trigger Private Repository Workflow
         uses: peter-evans/repository-dispatch@v2
         with:
-          token: ${{ secrets.REPO_DISPATCH_TOKEN }}
-          repository: abhinavrathore25/Jewellery-Ecommerce
+          token: ${{ secrets.PRIVATE_REPO_TOKEN }}
+          repository: your-username/your-private-repo
           event-type: sync-client
