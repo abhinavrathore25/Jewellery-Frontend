@@ -16,6 +16,6 @@ jobs:
       - name: Trigger Private Repository Workflow
         uses: peter-evans/repository-dispatch@v2
         with:
-          token: ${{ secrets.PRIVATE_REPO_TOKEN }}
+          token: ${{ secrets.PAT }}
           repository: abhinavrathore25/Jewellery-Ecommerce
           event-type: sync-client
